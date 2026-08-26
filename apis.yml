@@ -1,8 +1,20 @@
 aid: pulmocide
 name: Pulmocide
-description: 'Pulmocide is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Pulmocide Ltd. is a privately held, clinical-stage biopharmaceutical company headquartered at 44
+  Southampton Buildings in London, United Kingdom, with a US entity (Pulmocide Inc.) in Boston,
+  Massachusetts. It develops novel inhaled medicines for pulmonary aspergillosis and other
+  difficult-to-treat respiratory diseases, delivering drug directly to the site of infection in the
+  lung to achieve high local exposure with low systemic exposure. Its lead asset is opelconazole
+  (formerly PC945), an inhaled triazole antifungal active against Aspergillus that has received US
+  FDA Orphan Drug, Fast Track and Qualified Infectious Disease Product designations; the company
+  reported Phase 2 OPERA-S safety results in 2024 and announced termination of the Phase 3 OPERA-T
+  study in 2025. Pulmocide is a drug developer, not a software or platform company: it publishes no
+  developer program, no public API, no SDKs and no machine-readable API contract of any kind. This
+  profile therefore records identity, corporate web properties and probed absence rather than API
+  artifacts.
 url: https://raw.githubusercontent.com/api-evangelist/pulmocide/refs/heads/main/apis.yml
+image: https://pulmocide.com/wp-content/uploads/2023/08/PULM_OG_Facebook.png
 x-type: company
 x-source: harvest:secondary-market
 x-tier: stub
@@ -12,6 +24,15 @@ created: '2026-08-26'
 modified: '2026-08-26'
 tags:
 - Company
+- Biotechnology
+- Pharmaceuticals
+- Life Sciences
+- Clinical Trials
+- Respiratory
+- Antifungal
+- Drug Development
+- Healthcare
+- United Kingdom
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +40,53 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: LLMsTxt
+  url: llms/pulmocide-llms.txt
+- type: DomainSecurity
+  url: security/pulmocide-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://pulmocide.com/
+- type: About
+  url: https://pulmocide.com/about-us/
+- type: Contact
+  url: https://pulmocide.com/contact/
+- type: News
+  url: https://pulmocide.com/in-the-news/
+- type: BlogRSS
+  url: https://pulmocide.com/feed/
+- type: Investors
+  url: https://pulmocide.com/investors-and-partners/
+- type: PrivacyPolicy
+  url: https://pulmocide.com/privacy-notice/
+- type: CookiePolicy
+  url: https://pulmocide.com/cookie-policy/
+- type: Accessibility
+  url: https://pulmocide.com/accessibility/
+x-enrichment:
+  date: '2026-08-26'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    Pulmocide Ltd. is a clinical-stage biopharmaceutical company whose product is an inhaled
+    antifungal drug (opelconazole), not software; its only web property is a twelve-page WordPress
+    marketing site with no developer section, and every contract-discovery path on pulmocide.com
+    (/openapi.json, /graphql, /llms.txt, every /.well-known/*) returned 404 while the site's stock
+    WordPress /wp-json/ discovery root is default CMS plumbing rather than an API the company ships.
+  evidence:
+  - url: https://pulmocide.com/openapi.json
+    status: 404
+  - url: https://pulmocide.com/graphql
+    status: 404
+  - url: https://pulmocide.com/llms.txt
+    status: 404
+  - url: https://pulmocide.com/.well-known/agent-card.json
+    status: 404
+  - url: https://pulmocide.com/wp-json/
+    status: 200
+  - url: https://github.com/pulmocide
+    status: 404
+  checked: '2026-08-26'

@@ -1,0 +1,45 @@
+# Pulmocide
+
+> Pulmocide Ltd. is a privately held, clinical-stage biopharmaceutical company in London, United
+> Kingdom (with Pulmocide Inc. in Boston, Massachusetts) developing novel inhaled medicines for
+> pulmonary aspergillosis and other difficult-to-treat respiratory diseases. Its lead asset is
+> opelconazole (formerly PC945), an inhaled triazole antifungal active against Aspergillus.
+
+## Important for agents
+
+Pulmocide publishes **no public API, no developer portal, no SDKs and no machine-readable API
+contract**. It is a drug developer, not a software or platform company. Verified by probe on
+2026-08-26: /openapi.json, /openapi.yaml, /swagger.json, /v1/openapi.json, /api-docs, /docs,
+/redoc, /graphql, /llms.txt and every /.well-known/* path on pulmocide.com return HTTP 404.
+
+The corporate site runs WordPress, so https://pulmocide.com/wp-json/ answers 200 with the stock
+WordPress REST discovery document. That is default CMS and plugin infrastructure, not a product
+API — it is undocumented, unsupported, unversioned by the company, and must not be treated as a
+Pulmocide integration surface.
+
+There is no GitHub organization at github.com/pulmocide, and no package named "pulmocide" is
+published on npm or PyPI.
+
+## Company
+
+- [Home](https://pulmocide.com/): Company overview and lead programs.
+- [Company Overview](https://pulmocide.com/about-us/): Mission, leadership and board.
+- [Aspergillosis](https://pulmocide.com/aspergillosis/): Disease background.
+- [Opelconazole](https://pulmocide.com/opelconazole/): Lead inhaled antifungal candidate.
+- [Portfolio](https://pulmocide.com/portfolio/): Pipeline overview.
+- [Investors & Partners](https://pulmocide.com/investors-and-partners/): Investor and partner information.
+- [In the News](https://pulmocide.com/in-the-news/): Press releases, publications and presentations.
+- [References](https://pulmocide.com/references/): Cited scientific literature.
+- [Contact](https://pulmocide.com/contact/): UK and US addresses, admin@pulmocide.com.
+
+## Optional
+
+- [News feed (RSS)](https://pulmocide.com/feed/): Site RSS feed.
+- [Privacy Notice](https://pulmocide.com/privacy-notice/)
+- [Cookie Policy](https://pulmocide.com/cookie-policy/)
+- [Accessibility](https://pulmocide.com/accessibility/)
+
+## Provenance
+
+Generated 2026-08-26 by the API Evangelist enrichment pipeline from apis.yml and live probes of
+pulmocide.com. Method: generated (no provider-published /llms.txt exists — 404).

@@ -1,0 +1,84 @@
+generated: '2026-08-26'
+method: probed
+source: live HTTPS probes of https://pulmocide.com/.well-known/* on 2026-08-26
+note: >-
+  Every well-known path probed on the only host Pulmocide operates returned 404 with the WordPress
+  theme's HTML 404 body. No well-known document is served, so NO WellKnown or SecurityTxt pointer is
+  emitted in apis.yml — this file records a verified absence, not a presence.
+hosts:
+- host: pulmocide.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+contract_discovery:
+  note: >-
+    STEP 0b contract discovery run against the single host pulmocide.com (there is no separate API
+    host, docs host or console host — apis[] is empty and the company publishes no developer portal).
+  probes:
+  - url: https://pulmocide.com/openapi.json
+    status: 404
+  - url: https://pulmocide.com/openapi.yaml
+    status: 404
+  - url: https://pulmocide.com/swagger.json
+    status: 404
+  - url: https://pulmocide.com/v1/openapi.json
+    status: 404
+  - url: https://pulmocide.com/api-docs
+    status: 404
+  - url: https://pulmocide.com/docs
+    status: 404
+  - url: https://pulmocide.com/redoc
+    status: 404
+  - url: https://pulmocide.com/graphql
+    status: 404
+  - url: https://pulmocide.com/llms.txt
+    status: 404
+  - url: https://pulmocide.com/robots.txt
+    status: 200
+    note: 'Two-line WordPress default: Disallow /wp-admin/, Allow /wp-admin/admin-ajax.php.'
+  - url: https://pulmocide.com/sitemap.xml
+    status: 200
+    note: SmartCrawl sitemap index; 12 marketing pages plus press releases. No developer content.
+  - url: https://pulmocide.com/wp-json/
+    status: 200
+    note: >-
+      The corporate marketing site runs WordPress and its default REST discovery root answers 200
+      with 296 routes across 19 namespaces (wp/v2, oembed/1.0, elementor/v1, forminator/v1,
+      wp-smush/v1, astra/v1 and other plugin namespaces). This is incidental CMS/plugin
+      infrastructure that ships with WordPress and its themes, NOT an API product Pulmocide
+      designed, documents, versions or supports. It is recorded here as an observed fact and is
+      deliberately NOT registered as an API in apis.yml, NOT saved as a contract, and NOT used to
+      derive any artifact — doing so would credit the company with an API it never shipped.
+  registries:
+  - registry: npm
+    query: pulmocide
+    url: https://registry.npmjs.org/-/v1/search?text=pulmocide
+    status: 200
+    results: 0
+  - registry: pypi
+    package: pulmocide
+    url: https://pypi.org/pypi/pulmocide/json
+    status: 404
+  - registry: github
+    url: https://github.com/pulmocide
+    status: 404
+    note: No GitHub organization exists under this name.
