@@ -14,6 +14,17 @@ description: >-
   profile therefore records identity, corporate web properties and probed absence rather than API
   artifacts.
 url: https://raw.githubusercontent.com/api-evangelist/pulmocide/refs/heads/main/apis.yml
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 image: https://pulmocide.com/wp-content/uploads/2023/08/PULM_OG_Facebook.png
 x-type: company
 x-source: harvest:secondary-market
